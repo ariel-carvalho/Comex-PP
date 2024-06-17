@@ -1,10 +1,12 @@
-﻿namespace Comex;
+﻿namespace Comex.Modelos;
 
 public class Pedido
 {
     public Cliente Cliente { get; private set; }
     public DateTime Data { get; private set; }
     public List<ItemDePedido> Itens { get; private set; }
+
+    public static List<Pedido> listaDePedidosParaSerUtilizadaDuranteOsTestes = new();
 
     public double Total { get; set; }
 
