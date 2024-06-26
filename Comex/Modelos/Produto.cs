@@ -3,7 +3,7 @@
 namespace Comex.Modelos;
 
 public class Produto
-{
+{  
     public Produto(string nome)
     {
         Nome = nome;
@@ -19,27 +19,27 @@ public class Produto
 
     public static List<Produto> listaDeProdutosParaSerUtilizadaDuranteOsTestes = new();
 
-    public void InicializaListaDeProdutos()
+    public static void InicializaListaDeProdutos()
     {
         Produto produto1 = new Produto("Notebook");
         produto1.Descricao = "Notebook Dell Inspiron";
         produto1.PrecoUnitario = 3500.00;
         produto1.Quantidade = 10;
 
-        Produto produto2 = new Produto("Notebook");
-        produto2.Descricao = "Notebook Dell Inspiron";
-        produto2.PrecoUnitario = 3500.00;
-        produto2.Quantidade = 10;
+        Produto produto2 = new Produto("Smartphone");
+        produto2.Descricao = "Smartphone Samsung Galaxy";
+        produto2.PrecoUnitario = 1200.00;
+        produto2.Quantidade = 25;
 
-        Produto produto3 = new Produto("Notebook");
-        produto3.Descricao = "Notebook Dell Inspiron";
-        produto3.PrecoUnitario = 3500.00;
-        produto3.Quantidade = 10;
+        Produto produto3 = new Produto("Monitor");
+        produto3.Descricao = "Monitor LG Ultrawide";
+        produto3.PrecoUnitario = 800.00;
+        produto3.Quantidade = 15;
 
-        Produto produto4 = new Produto("Notebook");
-        produto4.Descricao = "Notebook Dell Inspiron";
-        produto4.PrecoUnitario = 3500.00;
-        produto4.Quantidade = 10;
+        Produto produto4 = new Produto("Teclado");
+        produto4.Descricao = "Teclado Mecânico RGB";
+        produto4.PrecoUnitario = 250.00;
+        produto4.Quantidade = 50;
 
         listaDeProdutosParaSerUtilizadaDuranteOsTestes.Add(produto1);
         listaDeProdutosParaSerUtilizadaDuranteOsTestes.Add(produto2);
@@ -63,4 +63,3 @@ public class Produto
         Console.Clear();
     }
 }
-

@@ -1,10 +1,12 @@
-﻿using Comex.Ordenacoes;
+﻿using Comex.Modelos;
+using Comex.Ordenacoes;
 
 namespace Comex.Menus;
 public class MenuPrincipal
 {
     public async Task InicializaAplicacao()
     {
+        Produto.InicializaListaDeProdutos();
         await ExibirOpcoesDoMenu();
     }
 
@@ -31,32 +33,25 @@ public class MenuPrincipal
             switch (opcaoEscolhidaNumerica)
             {
                 case 1:
-                    MenuCriarProduto criarProduto = new MenuCriarProduto();
-                    criarProduto.CriarProduto();
+                    new MenuCriarProduto().CriarProduto();
                     break;
                 case 2:
-                    MenuListarProdutos menuListarProdutos = new MenuListarProdutos();
-                    menuListarProdutos.ListarProdutos();
+                    new MenuListarProdutos().ListarProdutos();
                     break;
-                case 3:
-                    MenuConsultarApiExterna menuConsultarApiExterna = new MenuConsultarApiExterna();
-                    await menuConsultarApiExterna.ConsultarApiExterna();
+                case 3:                    
+                    await new MenuConsultarApiExterna().ConsultarApiExterna();
                     break;
-                case 4:
-                    OrdenaLista ordenaListaPorNome = new OrdenaLista();
-                    ordenaListaPorNome.OrdenarProdutosPorTitulo();
+                case 4:                    
+                    new OrdenaLista().OrdenarProdutosPorTitulo();
                     break;
-                case 5:
-                    OrdenaLista ordenaListaPorPreco = new OrdenaLista();
-                    ordenaListaPorPreco.OrdenarProdutosPorPreco();
+                case 5:                    
+                    new OrdenaLista().OrdenarProdutosPorPreco();
                     break;
-                case 6:
-                    MenuCriarPedido menuCriarPedido = new MenuCriarPedido();
-                    menuCriarPedido.CriarPedido();
+                case 6:                    
+                    new MenuCriarPedido().CriarPedido();
                     break;
                 case 7:
-                    MenuListarPedidos menuListarPedidos = new MenuListarPedidos();
-                    menuListarPedidos.ListarPedidos();
+                    new MenuListarPedidos().ListarPedidos();
                     break;
                 case -1:
                     Console.WriteLine("Tchau tchau :)");

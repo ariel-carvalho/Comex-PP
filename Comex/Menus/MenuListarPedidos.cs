@@ -4,6 +4,7 @@ namespace Comex.Menus;
 
 public class MenuListarPedidos
 {
+    
     public void ListarPedidos()
     {
         Console.Clear();

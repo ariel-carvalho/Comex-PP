@@ -4,7 +4,7 @@ using System.Text.Json;
 namespace Comex.Menus;
 
 public class MenuConsultarApiExterna
-{
+{      
     public async Task ConsultarApiExterna()
     {
         using (HttpClient client = new HttpClient())
